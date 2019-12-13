@@ -1,0 +1,78 @@
+SET CONFIG VALUES:
+$ git config --global user.name "MarzanShuvo"
+$ git config --global user.email "Marzanalam3@gmail.com"
+$ git config --list
+
+
+NEED HELP
+$ git help config
+$ git config --help
+
+
+INITALIZATION A REPOSITORY FROM EXISTING CODE
+$ git init (creating a folder that tracks the code folder)
+$ rm -rf .git  (deleting the git folder)
+
+
+BEFORE FIRST COMMIT
+$ git status (shows which files are not added to git reprository)
+$ touch .gitignore (for ignore the unnecessary formated file-i have to tell in the directory which file i want to ignore in .gitignore directory)
+
+
+ADD FILES TO STAGING AREA
+$ git add -A (add all file in this directory excet for the ignore file)
+$ git status
+
+REMOVE FILES FROM STAGING AREA
+$ git reset
+$ git status
+
+
+OUR FIRST COMMIT
+$ git add -A
+$ git commit -m "Initial Commit" 
+$ git status
+$ git log
+
+
+# CLONING A PEMOTE REPO
+$ git clone <url> <where to clone>
+$ git clone ../remote_repo.git .
+$ git clone https://github.com/CoreyMSchafer/remote_repo.git .     (.- save into current directoryS)
+
+VIEWING INFORMATION ABOUT THE REMOTE REPOSITORY
+$ git remote -v
+$ git branch -a
+
+COMMIT CHANGES DID PREVIOUSLY
+$ git diff (show where the change is)
+$ git status
+$ git add -A
+$ gti commit -m "Modified function"
+
+Then push
+$ git pull origin master
+$ git push origin master
+
+CREATE A BRANCH FOR DESIRED FEATURE
+$ git branch <name>
+$ gti checkout <name> [for working with this branch]
+
+AFTER COMMIT PUSH BRANCH TO REMOVE 
+$ git push -u origin <name>
+$ git branch -a
+
+MERGE A BRANCH 
+$ git checkout master
+$ git pull origin master
+$ git branch --merged
+$ git merge <name>
+$ git push origin master
+
+
+DELETING A BRANCH
+$ git branch --merged
+$ git brach -d <name> (branch name)
+$ git branch -a
+$ git push origin --delete <name>
+
